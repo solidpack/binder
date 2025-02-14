@@ -1,11 +1,26 @@
 [versions]
-kotlin = "2.0.20"
+kotlin = "1.9.24"
 shadow = "8.3.3"
+creative = "1.7.3"
+kotlinpoet = "2.0.0"
+plugin-publish = "1.2.1"
+central-publish = "1.2.4"
 
 [libraries]
 kotlin-jvm = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+creative-api = { module = "team.unnamed:creative-api", version.ref = "creative" }
+creative-serializer = { module = "team.unnamed:creative-serializer-minecraft", version.ref = "creative" }
+kotlinpoet = { module = "com.squareup:kotlinpoet", version.ref = "kotlinpoet" }
+
+[bundles]
+creative = [
+    "creative-api",
+    "creative-serializer"
+]
 
 [plugins]
 kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }
+plugin-publish = { id = "com.gradle.plugin-publish", version.ref = "plugin-publish" }
+central-publish = { id = "net.thebugmc.gradle.sonatype-central-portal-publisher", version.ref = "central-publish" }

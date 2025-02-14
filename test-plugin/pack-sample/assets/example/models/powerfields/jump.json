@@ -1,0 +1,6 @@
+{
+  "parent": "powergolf:powerfields/generic_jump",
+  "textures": {
+    "layer0": "powergolf:powerfields/jump"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "powergolf:powerfields/generic_wind",
+  "textures": {
+    "0": "powergolf:powerfields/wind_1",
+    "1": "powergolf:powerfields/wind_2",
+    "particle": "powergolf:powerfields/wind_1"
+  }
+}

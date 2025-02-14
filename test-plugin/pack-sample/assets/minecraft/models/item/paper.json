@@ -1,0 +1,26 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "item/paper"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1
+      },
+      "model": "example:powerfields/speed"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 2
+      },
+      "model": "example:powerfields/jump"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 6
+      },
+      "model": "example:powerfields/wind"
+    }
+  ]
+}
