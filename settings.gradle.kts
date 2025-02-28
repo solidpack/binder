@@ -15,4 +15,4 @@ plugins {
 
 rootProject.name = "binder"
 
-include("api", "plugin", "test-plugin")
+include("plugin", "test-plugin")

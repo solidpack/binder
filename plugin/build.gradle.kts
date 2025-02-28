@@ -4,7 +4,8 @@ plugins {
 }
 
 dependencies {
-    api(project(":api"))
+    api(rootProject.libs.solid)
+    implementation(rootProject.libs.kotlinpoet)
 }
 
 gradlePlugin {
@@ -22,6 +23,5 @@ gradlePlugin {
 }
 
 tasks.shadowJar {
-    dependsOn(":api:shadowJar")
     archiveClassifier.set("")
 }

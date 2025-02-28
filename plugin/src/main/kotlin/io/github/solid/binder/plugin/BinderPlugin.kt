@@ -1,8 +1,6 @@
 package io.github.solid.binder.plugin
 
-import io.github.solid.binder.api.EnumGenerator
-import io.github.solid.binder.api.PackCrawler
-import io.github.solid.binder.api.PackModel
+import io.github.solid.resourcepack.api.link.ModelLink
 import org.gradle.api.DefaultTask
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -41,7 +39,7 @@ abstract class GenerateBindingsTask : DefaultTask() {
 
     @TaskAction
     fun action() {
-        val models = mutableListOf<PackModel>()
+        val models = mutableListOf<ModelLink>()
         packPath.files.forEach { from ->
             models.addAll(PackCrawler.crawl(from.toPath(), namespaces.get()))
         }
