@@ -1,4 +1,4 @@
-# binder ![Maven Central Version](https://img.shields.io/maven-central/v/io.github.solid-resourcepack.binder/api) ![Gradle Plugin Portal Version](https://img.shields.io/gradle-plugin-portal/v/io.github.solid-resourcepack.binder)
+# binder ![Gradle Plugin Portal Version](https://img.shields.io/gradle-plugin-portal/v/io.github.solid-resourcepack.binder)
 
 A gradle plugin that generates bindings for blocks and items of a specified minecraft resource pack.
 This aims to create a typesafe experience through enum classes when creating everything related to resource packs
