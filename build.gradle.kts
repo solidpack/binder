@@ -10,10 +10,11 @@ plugins {
 allprojects {
 
     group = "io.github.solid-resourcepack.binder"
-    version = "1.0"
+    version = "1.1"
 
     repositories {
         mavenCentral()
+        maven("https://repo.mcsports.club/snapshots")
     }
 }
 
