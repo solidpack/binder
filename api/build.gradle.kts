@@ -1,4 +1,4 @@
 dependencies {
-    api(rootProject.libs.bundles.creative)
+    api(rootProject.libs.solid)
     api(rootProject.libs.kotlinpoet)
 }

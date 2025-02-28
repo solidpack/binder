@@ -1,8 +1,8 @@
 package io.github.solid.binder.api
 
 import com.squareup.kotlinpoet.*
+import io.github.solid.resourcepack.api.link.ModelType
 import net.kyori.adventure.key.Key
-import team.unnamed.creative.model.ItemPredicate
 import java.nio.file.Path
 
 class EnumGenerator(
@@ -36,10 +36,14 @@ class EnumGenerator(
             val block = CodeBlock.builder()
             block.add("%T(", PackModel::class)
             block.add("key = %T.key(%S)", Key::class, model.key)
+            block.add(", type = %T.${model.type}", ModelType::class)
+            if (model.parent != null) {
+                block.add(", parent = %T.key(%S)", Key::class, model.parent)
+            }
             if (model.predicates != null) {
-                block.add(", predicates = listOf(")
-                model.predicates.forEachIndexed { index, predicate ->
-                    block.add("%T.custom(%S, %S)", ItemPredicate::class, predicate.name(), predicate.value())
+                block.add(", predicates = mapOf(")
+                model.predicates.onEachIndexed { index, entry ->
+                    block.add("%S to %S", entry.key, entry.value)
                     if (model.predicates.size > index + 1) {
                         block.add(", ")
                     }
