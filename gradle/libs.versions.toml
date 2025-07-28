@@ -1,7 +1,7 @@
 [versions]
 kotlin = "1.9.24"
 shadow = "8.3.3"
-solid = "1.1.1"
+solid = "1.1.2"
 kotlinpoet = "2.0.0"
 plugin-publish = "1.2.1"
 central-publish = "1.2.4"
@@ -10,7 +10,7 @@ central-publish = "1.2.4"
 kotlin-jvm = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlinpoet = { module = "com.squareup:kotlinpoet", version.ref = "kotlinpoet" }
-solid = { module = "io.github.solid-resourcepack:solid-api", version.ref = "solid" }
+solid = { module = "io.github.solidpack:solid-api", version.ref = "solid" }
 
 [plugins]
 kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
