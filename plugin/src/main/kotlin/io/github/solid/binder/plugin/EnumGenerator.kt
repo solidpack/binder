@@ -5,6 +5,7 @@ import io.github.solid.resourcepack.api.link.ModelLink
 import io.github.solid.resourcepack.api.link.ModelType
 import net.kyori.adventure.key.Key
 import java.nio.file.Path
+import kotlin.math.min
 
 class EnumGenerator(
     private val models: List<ModelLink>,
@@ -31,7 +32,7 @@ class EnumGenerator(
                 .uppercase()
                 .split("/")
                 .reversed()
-                .subList(0, depth)
+                .let { it.subList(0, min(it.size, depth))}
                 .joinToString("_")
                 .replace("-", "_")
             val block = CodeBlock.builder()

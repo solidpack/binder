@@ -10,7 +10,7 @@ plugins {
 allprojects {
 
     group = "io.github.solid-resourcepack.binder"
-    version = "1.1.2"
+    version = "1.1.6"
 
     repositories {
         mavenCentral()

@@ -1,5 +1,5 @@
 plugins {
-    id("io.github.solid-resourcepack.binder") version "1.1.1"
+    id("io.github.solid-resourcepack.binder") version "1.1.6"
 }
 
 sourceSets.main {
@@ -7,7 +7,7 @@ sourceSets.main {
 }
 
 dependencies {
-    implementation(rootProject.libs.solid)
+    compileOnly(rootProject.libs.solid)
 }
 
 packBinder {
